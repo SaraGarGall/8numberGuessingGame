@@ -1,0 +1,16 @@
+{
+  "name": "8numberguessinggame",
+  "version": "1.0.0",
+  "description": "Number Guessing Game: It is a program that uses a for loop to limit the number of attempts in a guessing game where the user tries to guess a random number.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "private": true,
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^11.1.0"
+  }
+}
