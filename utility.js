@@ -6,21 +6,20 @@ export function randomIntNumber() {
   /*It returns a random number between the specified values. The returned value is no lower than (and may possibly equal) min, and is less than (and not equal) max.*/
 }
 
-export function checkTheGuessedNumber() {
+export async function checkTheGuessedNumber() {
   let random = randomIntNumber();
-  console.log("random number is:", random);
   let attempt;
 
   const validateNumber = n => {
-    if (n >= 1) {
+    if (n >= 1 && n <= 100) {
       return true;
     } else {
-      return 'Error. The number has to be greater than 0 and it cannot have decimals.';
+      return 'The number has to be an integer between 1 and 100 (inclusive)';
     }
   };
 
   do {
-    attempt = inquirer.prompt([
+    attempt = await inquirer.prompt([
       {
         type: 'number',
         name: 'number',
@@ -29,6 +28,13 @@ export function checkTheGuessedNumber() {
         validate: validateNumber
       }
     ]);
+
+    if(attempt.number > random){
+      console.log('It is a lower number')
+    } else{
+      console.log('It is a higher number');
+    }
+
   } while (random !== attempt.number);
 
   console.log("right number:", attempt.number);
