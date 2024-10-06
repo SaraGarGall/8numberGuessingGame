@@ -1,7 +1,7 @@
 //Number Guessing Game: Write a program that uses a for loop to limit the number of attempts in a guessing game where the user tries to guess a random number.
 
 import { randomIntNumber, checkTheGuessedNumber } from './utility.js';
-import inquirer from 'inquirer';
+/*import inquirer from 'inquirer';
 
 const validateNumber = n => {
   if (n >= 1) {
@@ -20,7 +20,6 @@ let input = await inquirer.prompt([
   }
 ]);
 
-let hidenNumber = randomIntNumber();
-let userGuess = checkTheGuessedNumber(input.number);
-
-console.log("hidenNumber:", hidenNumber,"userGuess", userGuess);
+let hidenNumber = randomIntNumber();*/
+/*let userGuess = */checkTheGuessedNumber();
+console.log('attempt:', attempt.number);
